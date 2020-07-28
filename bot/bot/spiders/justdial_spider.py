@@ -64,7 +64,3 @@ class justdialspider(scrapy.Spider):
 
          yield items
 
-         next_page = 'https://www.justdial.com/Delhi/Estate-Agents-For-Residential-Rental/page-'+str(justdialspider.page_number)
-         if justdialspider.page_number <= 10:
-             justdialspider.page_number +=1
-             yield response.follow(next_page, callback= self.parse)
